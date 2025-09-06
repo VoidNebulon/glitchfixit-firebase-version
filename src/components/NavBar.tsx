@@ -54,7 +54,7 @@ export function NavBar() {
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Logo />
+        <Logo className="text-foreground" />
 
         <nav className="hidden items-center gap-4 md:flex">
           <NavLinkItems />
@@ -75,7 +75,7 @@ export function NavBar() {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="p-4">
-                  <Logo />
+                  <Logo className="text-foreground" />
                   <div className="mt-8">
                     <Search />
                   </div>

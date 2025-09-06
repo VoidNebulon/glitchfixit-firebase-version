@@ -1,8 +1,19 @@
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
-export function Logo() {
+type LogoProps = {
+  className?: string;
+};
+
+export function Logo({ className }: LogoProps) {
   return (
-    <Link href="/" className="text-2xl font-extrabold tracking-tight text-foreground font-headline">
+    <Link
+      href="/"
+      className={cn(
+        'text-2xl font-extrabold tracking-tight font-headline',
+        className
+      )}
+    >
       GlitchFix <span className="text-primary">Blog</span>
     </Link>
   );

@@ -22,8 +22,8 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:text-left">
           <div className="flex flex-col items-center md:items-start">
-            <div className="mb-4 bg-white/10 p-3 rounded-md">
-              <Logo />
+            <div className="mb-4 p-3 rounded-md">
+              <Logo className="text-white" />
             </div>
             <p className="max-w-xs text-sm">
               A modern blog for developers fixing bugs and building the future.
