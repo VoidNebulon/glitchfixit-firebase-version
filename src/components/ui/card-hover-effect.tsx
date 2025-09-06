@@ -71,8 +71,8 @@ export const Card = ({
     <div
       className={cn(
         'rounded-2xl h-full w-full p-4 overflow-hidden bg-background relative z-20 transition-all duration-300 ease-in-out',
-        'shadow-[9px_9px_16px_rgb(212,212,212),-9px_-9px_16px_rgb(255,255,255)] dark:shadow-[9px_9px_16px_rgb(25,25,25),-9px_-9px_16px_rgb(61,61,61)]',
-        'group-hover:shadow-[inset_9px_9px_16px_rgb(212,212,212),inset_-9px_-9px_16px_rgb(255,255,255)] dark:group-hover:shadow-[inset_9px_9px_16px_rgb(25,25,25),inset_-9px_-9px_16px_rgb(61,61,61)]',
+        'shadow-[inset_9px_9px_16px_rgb(212,212,212),inset_-9px_-9px_16px_rgb(255,255,255)] dark:shadow-[inset_9px_9px_16px_rgb(25,25,25),inset_-9px_-9px_16px_rgb(61,61,61)]',
+        'group-hover:shadow-[9px_9px_16px_rgb(212,212,212),-9px_-9px_16px_rgb(255,255,255)] dark:group-hover:shadow-[9px_9px_16px_rgb(25,25,25),-9px_-9px_16px_rgb(61,61,61)]',
         className
       )}
     >
