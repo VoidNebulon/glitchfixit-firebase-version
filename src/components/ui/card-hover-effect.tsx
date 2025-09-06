@@ -75,7 +75,7 @@ export const Card = ({
       )}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="p-2">{children}</div>
       </div>
     </div>
   );
@@ -88,7 +88,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn('text-foreground font-bold tracking-wide mt-4', className)}>
+    <h4 className={cn('text-foreground font-bold tracking-wide mt-2', className)}>
       {children}
     </h4>
   );
@@ -103,7 +103,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        'mt-8 text-muted-foreground tracking-wide leading-relaxed text-sm',
+        'mt-4 text-muted-foreground tracking-wide leading-relaxed text-sm',
         className
       )}
     >
