@@ -31,8 +31,7 @@ export function SocialLinks() {
                 <social.icon className="h-5 w-5" />
                 <span className="sr-only">{social.label}</span>
               </Button>
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary via-green-500 to-accent opacity-0 blur transition-opacity duration-300 group-hover/social:opacity-75 animate-pulse group-hover/social:animate-none"></div>
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary via-green-500 to-accent opacity-0 blur-xl transition-opacity duration-300 group-hover/social:opacity-75 animate-pulse group-hover/social:animate-none"></div>
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary to-accent opacity-0 blur transition-opacity duration-300 group-hover/social:opacity-75"></div>
             </Link>
           ))}
         </div>
