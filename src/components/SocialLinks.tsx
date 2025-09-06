@@ -1,11 +1,11 @@
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Twitter, Linkedin } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 
 const socials = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
   { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
   { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
 ];
 
 export function SocialLinks() {
