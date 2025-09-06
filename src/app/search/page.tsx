@@ -3,18 +3,18 @@
 import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { PostCard } from '@/components/PostCard';
-import { getAllPosts, getAllCategories } from '@/lib/posts';
 import type { Post } from '@/lib/types';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search as SearchIcon, X } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Skeleton } from '@/components/ui/skeleton';
+import { getAllPosts, getAllCategories } from '@/lib/posts';
 
-function SearchPageComponent() {
+// This is the actual component that renders the search UI.
+// It receives posts and categories as props from its parent.
+function SearchPageComponent({ allPosts, categories }: { allPosts: Post[], categories: string[] }) {
   const searchParams = useSearchParams();
-  const [allPosts, setAllPosts] = useState<Post[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,15 +23,8 @@ function SearchPageComponent() {
   const [sort, setSort] = useState('newest');
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      const posts = await getAllPosts();
-      const cats = await getAllCategories();
-      setAllPosts(posts);
-      setCategories(cats);
-      setLoading(false);
-    };
-    fetchData();
+    // Initial load is handled by passing props, so we can set loading to false.
+    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -134,10 +127,50 @@ function SearchPageComponent() {
   );
 }
 
+// This is the new wrapper component that fetches data on the server.
+async function SearchDataWrapper() {
+  const allPosts = await getAllPosts();
+  const categories = await getAllCategories();
+
+  return <SearchPageComponent allPosts={allPosts} categories={categories} />;
+}
+
+
+// This remains the default export for the page.
 export default function SearchPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <SearchPageComponent />
+    <Suspense fallback={<SearchPageSkeleton />}>
+      <SearchDataWrapper />
     </Suspense>
   )
+}
+
+function SearchPageSkeleton() {
+  return (
+    <div className="min-h-screen bg-muted">
+      <div className="container mx-auto px-4 py-12">
+        <div className="mx-auto mb-12 max-w-3xl">
+          <div className="flex items-center gap-2 mb-4">
+             <Skeleton className="h-10 w-10 rounded-full" />
+             <Skeleton className="h-10 w-64" />
+          </div>
+          <div className="grid grid-cols-1 gap-4 rounded-2xl bg-card p-6 shadow-sm sm:grid-cols-2 md:grid-cols-4">
+            <Skeleton className="h-10 sm:col-span-2" />
+            <Skeleton className="h-10" />
+            <Skeleton className="h-10" />
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="space-y-4">
+              <Skeleton className="h-56 w-full rounded-2xl" />
+              <Skeleton className="h-6 w-3/4" />
+              <Skeleton className="h-4 w-1/2" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
