@@ -18,14 +18,14 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-primary via-green-700 to-green-900 text-primary-foreground">
+    <footer className="bg-gradient-to-br from-[#0b3d0b] via-[#145214] to-[#1b5e20] text-white shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="flex flex-col items-start">
             <div className="mb-4 bg-white/90 p-3 rounded-md">
               <Logo />
             </div>
-            <p className="max-w-xs text-sm text-primary-foreground/80">
+            <p className="max-w-xs text-sm text-white/80">
               A modern blog for developers fixing bugs and building the future.
             </p>
           </div>
@@ -34,7 +34,7 @@ export function Footer() {
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-primary-foreground/80 transition-colors hover:text-white">
+                  <Link href={link.href} className="text-sm text-white/80 transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -55,18 +55,18 @@ export function Footer() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="relative z-10 text-primary-foreground/80 hover:bg-white/20 hover:text-white"
+                    className="relative z-10 text-white/80 hover:bg-white/20 hover:text-white"
                   >
                     <social.icon className="h-5 w-5" />
                     <span className="sr-only">{social.label}</span>
                   </Button>
-                  <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-accent to-white opacity-0 blur transition-opacity duration-300 group-hover/social:opacity-75"></div>
+                  <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-accent to-white opacity-0 blur-sm transition-opacity duration-300 group-hover/social:opacity-75"></div>
                 </Link>
               ))}
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-white/20 pt-8 text-center text-sm text-primary-foreground/70">
+        <div className="mt-12 border-t border-white/20 pt-8 text-center text-sm text-white/70">
           <p>&copy; {new Date().getFullYear()} GlitchFix Blog. All rights reserved.</p>
         </div>
       </div>
