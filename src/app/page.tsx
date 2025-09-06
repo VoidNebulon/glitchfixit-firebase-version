@@ -30,7 +30,7 @@ export default async function Home() {
           <h2 className="mb-12 text-center font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
             Categories
           </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {categories.slice(0, 6).map((category) => (
               <CategoryCard key={category} category={category} />
             ))}
