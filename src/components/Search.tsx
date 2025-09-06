@@ -23,7 +23,7 @@ export function Search() {
         type="search"
         name="q"
         placeholder="Search posts..."
-        className="h-9 rounded-full bg-muted/80 pl-10 text-sm"
+        className="h-9 rounded-full border-primary/20 bg-muted/80 pl-10 text-sm focus:border-primary"
         aria-label="Search posts"
       />
       <SearchIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
