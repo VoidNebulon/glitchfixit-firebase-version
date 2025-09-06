@@ -18,7 +18,7 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-[#0b3d0b] via-[#145214] to-[#1b5e20] text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.5)]">
+    <footer className="bg-gradient-to-br from-[#0b3d0b] via-[#145214] to-[#1b5e20] text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.25)]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="flex flex-col items-start">
