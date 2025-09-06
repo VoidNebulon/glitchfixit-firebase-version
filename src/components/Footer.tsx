@@ -45,12 +45,23 @@ export function Footer() {
             <h3 className="mb-4 font-headline text-lg font-semibold">Connect</h3>
             <div className="flex space-x-2">
               {socials.map((social) => (
-                <Button key={social.label} variant="ghost" size="icon" asChild className="text-primary-foreground/80 hover:bg-white/20 hover:text-white">
-                  <Link href={social.href} target="_blank" rel="noopener noreferrer">
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative group/social"
+                >
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="relative z-10 text-primary-foreground/80 hover:bg-white/20 hover:text-white"
+                  >
                     <social.icon className="h-5 w-5" />
                     <span className="sr-only">{social.label}</span>
-                  </Link>
-                </Button>
+                  </Button>
+                  <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-accent to-white opacity-0 blur transition-opacity duration-300 group-hover/social:opacity-75"></div>
+                </Link>
               ))}
             </div>
           </div>
