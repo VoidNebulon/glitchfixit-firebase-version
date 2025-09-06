@@ -71,7 +71,7 @@ export function Hero() {
           <Button
             size="lg"
             variant="outline"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto border-primary/20 focus:border-primary"
             onClick={() => scrollTo('categories')}
           >
             <LayoutGrid className="mr-2 h-5 w-5" />
