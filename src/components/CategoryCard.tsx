@@ -1,7 +1,5 @@
-'use client';
-
 import Link from 'next/link';
-import { Card, CardTitle, CardDescription } from './ui/card-hover-effect';
+import { Card, CardTitle, CardDescription } from '@/components/ui/card-hover-effect';
 
 type CategoryCardProps = {
   category: {
