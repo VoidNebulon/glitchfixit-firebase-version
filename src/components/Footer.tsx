@@ -18,23 +18,23 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-[#a8e6a3] via-[#6fdc6f] to-[#3cb371] text-[#0b3d0b] shadow-[inset_0_0_20px_rgba(0,0,0,0.1)]">
+    <footer style={{ backgroundColor: '#030f04' }} className="text-white/80">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:text-left">
           <div className="flex flex-col items-center md:items-start">
-            <div className="mb-4 bg-white/90 p-3 rounded-md">
+            <div className="mb-4 bg-white/10 p-3 rounded-md">
               <Logo />
             </div>
-            <p className="max-w-xs text-sm text-[#0b3d0b]/80">
+            <p className="max-w-xs text-sm">
               A modern blog for developers fixing bugs and building the future.
             </p>
           </div>
           <div>
-            <h3 className="mb-4 font-headline text-lg font-semibold">Quick Links</h3>
+            <h3 className="mb-4 font-headline text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[#0b3d0b]/80 transition-colors hover:text-[#0b3d0b]">
+                  <Link href={link.href} className="text-sm transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -42,7 +42,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 font-headline text-lg font-semibold">Connect</h3>
+            <h3 className="mb-4 font-headline text-lg font-semibold text-white">Connect</h3>
             <div className="flex justify-center space-x-2 md:justify-start">
               {socials.map((social) => (
                 <Link
@@ -55,7 +55,7 @@ export function Footer() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="relative z-10 text-[#0b3d0b]/80 hover:bg-black/10 hover:text-[#0b3d0b]"
+                    className="relative z-10 hover:bg-white/10 hover:text-white"
                   >
                     <social.icon className="h-5 w-5" />
                     <span className="sr-only">{social.label}</span>
@@ -66,7 +66,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-black/10 pt-8 text-center text-sm text-[#0b3d0b]/70">
+        <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/70">
           <p>&copy; {new Date().getFullYear()} GlitchFix Blog. All rights reserved.</p>
         </div>
       </div>
