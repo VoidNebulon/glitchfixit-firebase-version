@@ -2,18 +2,12 @@ import { Hero } from '@/components/Hero';
 import { SocialLinks } from '@/components/SocialLinks';
 import { PostCard } from '@/components/PostCard';
 import { getAllPosts, getAllCategories } from '@/lib/posts';
-import { HoverEffect } from '@/components/ui/card-hover-effect';
+import { CategoryCard } from '@/components/CategoryCard';
 
 export default async function Home() {
   const posts = await getAllPosts();
   const featuredPosts = posts.filter((post) => post.featured).slice(0, 6);
-  const categories = await getAllCategories();
-  
-  const categoryItems = categories.slice(0, 6).map((category) => ({
-    title: category,
-    description: `Browse all posts in the ${category} category.`,
-    link: `/search?category=${encodeURIComponent(category)}`,
-  }));
+  const categories = (await getAllCategories()).slice(0, 6);
 
   return (
     <div className="flex flex-col">
@@ -36,8 +30,10 @@ export default async function Home() {
           <h2 className="mb-12 text-center font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
             Categories
           </h2>
-          <div className="max-w-5xl mx-auto">
-            <HoverEffect items={categoryItems} />
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {categories.map((category) => (
+              <CategoryCard key={category} category={category} />
+            ))}
           </div>
         </div>
       </section>

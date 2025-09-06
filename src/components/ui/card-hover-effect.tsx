@@ -70,9 +70,9 @@ export const Card = ({
   return (
     <div
       className={cn(
-        'rounded-2xl h-full w-full p-4 overflow-hidden bg-background relative z-20 transition-all duration-300 ease-in-out',
-        'shadow-[inset_5px_5px_10px_rgb(212,212,212),inset_-5px_-5px_10px_rgb(255,255,255)] dark:shadow-[inset_5px_5px_10px_rgb(25,25,25),inset_-5px_-5px_10px_rgb(61,61,61)]',
-        'group-hover:shadow-[5px_5px_10px_rgb(212,212,212),-5px_-5px_10px_rgb(255,255,255)] dark:group-hover:shadow-[5px_5px_10px_rgb(25,25,25),-5px_-5px_10px_rgb(61,61,61)]',
+        'rounded-2xl h-full w-full p-2 overflow-hidden bg-background border border-transparent dark:border-white/20 group-hover:border-slate-700 relative z-20 transition-all duration-300 ease-in-out',
+        'shadow-[inset_0_2px_4px_0_rgba(0,0,0,0.05)] dark:shadow-[inset_0_2px_4px_0_rgba(255,255,255,0.05)]',
+        'group-hover:shadow-lg',
         className
       )}
     >
