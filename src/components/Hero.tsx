@@ -53,6 +53,7 @@ export function Hero() {
       waveWidth={40}
       speed="slow"
       waveOpacity={0.4}
+      colors={['#18A558', '#66D29A', '#e7f9ef']}
     >
       <div className="container z-10 mx-auto px-4">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
