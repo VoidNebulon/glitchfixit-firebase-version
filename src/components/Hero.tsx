@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
-import { WaveBackground } from './WaveBackground';
+import { WavyBackground } from './ui/wavy-background';
 import Link from 'next/link';
 import { ArrowDown, LayoutGrid } from 'lucide-react';
 
@@ -19,6 +19,7 @@ export function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    // This effect should only run on the client
     const currentPhrase = phrases[phraseIndex];
     const typingSpeed = isDeleting ? 75 : 150;
 
@@ -46,8 +47,15 @@ export function Hero() {
   };
 
   return (
-    <section className="relative flex h-[80vh] min-h-[600px] w-full items-center justify-center overflow-hidden bg-muted text-center">
-      <WaveBackground />
+    <WavyBackground 
+      className="max-w-4xl mx-auto text-center"
+      containerClassName="h-[80vh] min-h-[600px]"
+      colors={['#18A558', '#66D29A', '#117c43', '#85e0b3']}
+      waveWidth={40}
+      backgroundFill="hsl(var(--muted))"
+      speed="slow"
+      waveOpacity={0.4}
+    >
       <div className="container z-10 mx-auto px-4">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
           Helping you to <br />
@@ -71,7 +79,7 @@ export function Hero() {
           <Button
             size="lg"
             variant="outline"
-            className="w-full sm:w-auto border-primary/20 focus:border-primary"
+            className="w-full sm:w-auto border-primary/20 bg-background/50 hover:bg-background/80 focus:border-primary"
             onClick={() => scrollTo('categories')}
           >
             <LayoutGrid className="mr-2 h-5 w-5" />
@@ -79,6 +87,6 @@ export function Hero() {
           </Button>
         </div>
       </div>
-    </section>
+    </WavyBackground>
   );
 }
