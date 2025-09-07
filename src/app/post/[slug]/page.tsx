@@ -134,7 +134,7 @@ export default async function PostPage({ params }: Props) {
           </div>
           <aside className="lg:col-span-4 lg:sticky top-24 self-start space-y-8">
             {/* TOC Placeholder */}
-            <div className="p-6 rounded-2xl bg-muted">
+            <div className="p-6 rounded-2xl bg-muted border">
               <h3 className="font-headline text-lg font-bold mb-4">Table of Contents</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="hover:text-primary cursor-pointer">Introduction</li>
