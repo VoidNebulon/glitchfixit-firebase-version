@@ -7,6 +7,5 @@ export type Post = {
   tags: string[];
   featured: boolean;
   coverImage: string;
-  readingTime?: string; // This can be from frontmatter as a fallback
   content: string;
 };

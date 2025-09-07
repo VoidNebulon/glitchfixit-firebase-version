@@ -6,9 +6,8 @@ import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import type { Post } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Calendar, UserCircle, Tag } from 'lucide-react';
+import { Calendar, UserCircle, Tag, Clock } from 'lucide-react';
 import { MdxContent } from '@/components/MdxContent';
-import { ReadingTime } from '@/components/ReadingTime';
 import { ShareButtons } from '@/components/ShareButtons';
 import { AdSlot } from '@/components/AdSlot';
 import { PostCard } from '@/components/PostCard';
@@ -59,6 +58,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Simple reading time calculation
+const calculateReadingTime = (content: string) => {
+  const wordsPerMinute = 200;
+  const wordCount = content.split(/\s+/).length;
+  const readingTime = Math.ceil(wordCount / wordsPerMinute);
+  return readingTime;
+};
+
+
 export default async function PostPage({ params }: Props) {
   const post = await getPostBySlug(params.slug);
 
@@ -72,6 +80,7 @@ export default async function PostPage({ params }: Props) {
     .slice(0, 3);
 
   const postUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/post/${post.slug}`;
+  const readingTime = calculateReadingTime(post.content);
 
   return (
     <article className="bg-background py-12 md:py-20">
@@ -92,7 +101,10 @@ export default async function PostPage({ params }: Props) {
             <Calendar className="h-4 w-4" />
             <time dateTime={post.date}>{format(new Date(post.date), 'MMMM d, yyyy')}</time>
           </div>
-          <ReadingTime content={post.content} />
+          <div className="flex items-center gap-2">
+            <Clock className="h-4 w-4" />
+            <span>{readingTime} min read</span>
+          </div>
         </div>
         <div className="mt-4 flex justify-center flex-wrap gap-2">
             {post.categories.map(cat => <Badge key={cat} variant="secondary">{cat}</Badge>)}
