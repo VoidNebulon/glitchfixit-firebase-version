@@ -1,7 +1,7 @@
 import { type Metadata } from 'next';
 import { getAllCategories } from '@/lib/posts';
 import { Tag } from 'lucide-react';
-import { HoverEffect } from '@/components/ui/card-hover-effect';
+import { CategoryCard } from '@/components/CategoryCard';
 
 export const metadata: Metadata = {
   title: 'All Categories',
@@ -12,7 +12,7 @@ export default async function CategoriesPage() {
   const categories = await getAllCategories();
   const categoryItems = categories.map(category => ({
     title: category,
-    description: `Browse all posts in the ${category} category.`,
+    description: `View all posts`,
     link: `/search?category=${encodeURIComponent(category)}`
   }));
 
@@ -29,8 +29,10 @@ export default async function CategoriesPage() {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 max-w-5xl">
-          <HoverEffect items={categoryItems} />
+        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {categoryItems.map((item) => (
+            <CategoryCard key={item.title} category={item} />
+          ))}
         </div>
       </div>
     </div>
