@@ -9,7 +9,8 @@ import { Button } from '@/components/ui/button';
 import { Search as SearchIcon, X } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Skeleton } from '@/components/ui/skeleton';
-import { getAllPosts, getAllCategories } from '@/lib/posts';
+// Note: We cannot import from '@/lib/posts' here as it's a client component.
+// Data is fetched in the server wrapper component below.
 
 // This is the actual component that renders the search UI.
 // It receives posts and categories as props from its parent.
@@ -128,7 +129,10 @@ function SearchPageComponent({ allPosts, categories }: { allPosts: Post[], categ
 }
 
 // This is the new wrapper component that fetches data on the server.
+// It must be defined in the same file to avoid circular dependencies.
 async function SearchDataWrapper() {
+  // We must import the server-side functions here, inside the async component.
+  const { getAllPosts, getAllCategories } = await import('@/lib/posts');
   const allPosts = await getAllPosts();
   const categories = await getAllCategories();
 
