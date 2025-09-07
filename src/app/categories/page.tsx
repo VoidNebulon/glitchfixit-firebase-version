@@ -1,11 +1,21 @@
 import { type Metadata } from 'next';
 import { getAllCategories } from '@/lib/posts';
-import { Tag } from 'lucide-react';
+import { Tag, Atom, Box, Bug, Braces, Layers, Paintbrush } from 'lucide-react';
 import { CategoryCard } from '@/components/CategoryCard';
+import type { ElementType } from 'react';
 
 export const metadata: Metadata = {
   title: 'All Categories',
   description: 'Browse all categories on the GlitchFix Blog.',
+};
+
+const categoryIcons: { [key: string]: ElementType } = {
+  'Next.js': Box,
+  'JavaScript': Braces,
+  'React': Atom,
+  'State Management': Layers,
+  'CSS': Paintbrush,
+  'Debugging': Bug,
 };
 
 export default async function CategoriesPage() {
@@ -13,7 +23,8 @@ export default async function CategoriesPage() {
   const categoryItems = categories.map(category => ({
     title: category,
     description: `View all posts`,
-    link: `/search?category=${encodeURIComponent(category)}`
+    link: `/search?category=${encodeURIComponent(category)}`,
+    icon: categoryIcons[category],
   }));
 
   return (

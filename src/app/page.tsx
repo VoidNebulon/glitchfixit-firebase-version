@@ -3,6 +3,17 @@ import { SocialLinks } from '@/components/SocialLinks';
 import { PostCard } from '@/components/PostCard';
 import { getAllPosts, getAllCategories } from '@/lib/posts';
 import { CategoryCard } from '@/components/CategoryCard';
+import type { ElementType } from 'react';
+import { Atom, Box, Bug, Braces, Layers, Paintbrush } from 'lucide-react';
+
+const categoryIcons: { [key: string]: ElementType } = {
+  'Next.js': Box,
+  'JavaScript': Braces,
+  'React': Atom,
+  'State Management': Layers,
+  'CSS': Paintbrush,
+  'Debugging': Bug,
+};
 
 export default async function Home() {
   const posts = await getAllPosts();
@@ -12,7 +23,8 @@ export default async function Home() {
   const categoryItems = categories.map(category => ({
     title: category,
     description: `View all posts`,
-    link: `/search?category=${encodeURIComponent(category)}`
+    link: `/search?category=${encodeURIComponent(category)}`,
+    icon: categoryIcons[category],
   }));
 
   return (
