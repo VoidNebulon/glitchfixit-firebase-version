@@ -50,9 +50,7 @@ export function Hero() {
     <WavyBackground 
       className="max-w-4xl mx-auto text-center"
       containerClassName="h-[80vh] min-h-[600px]"
-      colors={['#18A558', '#66D29A', '#117c43', '#85e0b3']}
       waveWidth={40}
-      backgroundFill="hsl(var(--muted))"
       speed="slow"
       waveOpacity={0.4}
     >
