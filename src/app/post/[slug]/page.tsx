@@ -6,7 +6,7 @@ import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import type { Post } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Calendar, UserCircle, Tag, Clock } from 'lucide-react';
+import { Calendar, UserCircle, Tag, Clock, Star } from 'lucide-react';
 import { MdxContent } from '@/components/MdxContent';
 import { ShareButtons } from '@/components/ShareButtons';
 import { AdSlot } from '@/components/AdSlot';
@@ -85,7 +85,12 @@ export default async function PostPage({ params }: Props) {
   return (
     <article className="bg-background py-12 md:py-20">
       <header className="container mx-auto px-4 max-w-4xl text-center">
-        {post.featured && <Badge className="mb-4">Featured</Badge>}
+        {post.featured && (
+          <Badge className="mb-4">
+            <Star className="mr-1.5 h-3.5 w-3.5" />
+            Featured
+          </Badge>
+        )}
         <h1 className="font-headline text-3xl md:text-5xl font-extrabold tracking-tight">
           {post.title}
         </h1>
