@@ -12,6 +12,9 @@ const phrases = [
   'master Next.js.',
   'level up your skills.',
   'debug with confidence.',
+  'explore new technologies.',
+  'optimize your system.',
+  'understand complex topics.',
 ];
 
 export function Hero() {
