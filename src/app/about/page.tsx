@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn more about GlitchFixIt and our mission to help developers.',
+  title: 'About GlitchFixIt',
+  description: 'Learn more about GlitchFixIt and our mission to help developers solve problems and build better applications.',
 };
 
 export default function AboutPage() {
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <div className="p-8 md:p-12">
               <h2 className="mb-4 font-headline text-3xl font-bold text-primary">Our Mission</h2>
               <p className="mb-4 text-foreground/90">
-                At GlitchFix, our mission is to demystify the complexities of modern web development. We believe that with the right guidance, anyone can overcome coding challenges and build amazing things. Whether you're a beginner taking your first steps or a seasoned pro looking to stay updated, our blog is your trusted companion.
+                At GlitchFixIt, our mission is to demystify the complexities of modern web development. We believe that with the right guidance, anyone can overcome coding challenges and build amazing things. Whether you're a beginner taking your first steps or a seasoned pro looking to stay updated, our blog is your trusted companion.
               </p>
               <p className="text-foreground/90">
                 We focus on providing practical tutorials, in-depth guides, and honest reviews of the latest tools and technologies. Our goal is to create content that is not only informative but also engaging and easy to understand.
