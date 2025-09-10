@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, memo } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { Logo } from './Logo';
 import { Search } from './Search';
@@ -23,10 +23,11 @@ const navLinks = [
 const NavLinkItems = memo(function NavLinkItems() {
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState('');
+
   useEffect(() => setMounted(true), []);
 
   return navLinks.map((link) => {
-    // Only calculate isActive after client-side mount
     const isActive = mounted && (pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href) && !link.href.includes('#')));
     
     return (
@@ -35,10 +36,10 @@ const NavLinkItems = memo(function NavLinkItems() {
         href={link.href}
         className={cn(
           'relative rounded-md px-3 py-2 text-sm font-medium transition-colors',
-          isActive
-            ? 'text-primary'
-            : 'text-foreground/80 hover:text-foreground'
+          isActive ? 'text-primary' : 'text-foreground/80 hover:text-foreground'
         )}
+        onMouseEnter={() => setHoveredLink(link.href)}
+        onMouseLeave={() => setHoveredLink('')}
       >
         {link.label}
         {isActive && (
@@ -48,6 +49,18 @@ const NavLinkItems = memo(function NavLinkItems() {
             style={{ borderRadius: '2px' }}
           />
         )}
+        <AnimatePresence>
+        {hoveredLink === link.href && !isActive && (
+            <motion.div
+              className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+              style={{ borderRadius: '2px' }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            />
+        )}
+        </AnimatePresence>
       </Link>
     );
   });
