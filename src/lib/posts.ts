@@ -38,7 +38,7 @@ export async function getAllPosts(): Promise<Post[]> {
 
   const allPosts = fileNames
     .map((fileName) => {
-      if (!fileName.endsWith('.mdx')) return null;
+      if (!fileName.endsWith('.md')) return null;
 
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -47,7 +47,7 @@ export async function getAllPosts(): Promise<Post[]> {
       
       const post: Post = {
         title: metadata.title ?? 'Untitled',
-        slug: metadata.slug ?? fileName.replace(/\.mdx$/, ''),
+        slug: metadata.slug ?? fileName.replace(/\.md$/, ''),
         date: metadata.date ?? new Date().toISOString(),
         author: metadata.author ?? 'Anonymous',
         categories: metadata.categories ?? [],
