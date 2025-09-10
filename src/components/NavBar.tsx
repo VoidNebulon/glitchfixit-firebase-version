@@ -1,9 +1,10 @@
+
 'use client';
 
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 
 import { Logo } from './Logo';
 import { Search } from './Search';
@@ -18,8 +19,33 @@ const navLinks = [
   { href: '/about', label: 'About Us' },
 ];
 
-export function NavBar() {
+const NavLinkItems = memo(function NavLinkItems() {
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  return navLinks.map((link) => {
+    // Only calculate isActive after client-side mount
+    const isActive = mounted && (pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href) && !link.href.includes('#')));
+    
+    return (
+      <Link
+        key={link.href}
+        href={link.href}
+        className={cn(
+          'rounded-md px-3 py-2 text-sm font-medium transition-colors',
+          isActive
+            ? 'bg-secondary text-primary'
+            : 'text-foreground/80 hover:bg-accent/80 hover:text-accent-foreground'
+        )}
+      >
+        {link.label}
+      </Link>
+    );
+  });
+});
+
+export function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,25 +55,6 @@ export function NavBar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const NavLinkItems = () =>
-    navLinks.map((link) => {
-      const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href) && link.href.includes('#') === false);
-      return (
-        <Link
-          key={link.href}
-          href={link.href}
-          className={cn(
-            'rounded-md px-3 py-2 text-sm font-medium transition-colors',
-            isActive
-              ? 'bg-secondary text-primary'
-              : 'text-foreground/80 hover:bg-accent/80 hover:text-accent-foreground'
-          )}
-        >
-          {link.label}
-        </Link>
-      )
-    });
 
   return (
     <header
