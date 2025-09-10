@@ -3,7 +3,7 @@ title: "Creating Reusable React Components"
 slug: "creating-reusable-react-components"
 date: "2024-06-15T09:45:00Z"
 author: "Reed Richards"
-categories: ["Web Dev", "Coding", "Software"]
+categories: ["Web Dev", "Coding", "Software", "Tutorials"]
 tags: ["components", "composition", "props"]
 featured: true
 coverImage: "https://picsum.photos/seed/109/1200/630"

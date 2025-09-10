@@ -1,6 +1,6 @@
 import { type Metadata } from 'next';
 import { getAllCategories } from '@/lib/posts';
-import { Tag, Newspaper, Star, Lightbulb, Code, Cpu, Smartphone, Gamepad, AppWindow, Shield, Globe, Pencil } from 'lucide-react';
+import { Tag, Newspaper, Star, Lightbulb, Code, Cpu, Smartphone, Gamepad, AppWindow, Shield, Globe, Pencil, BookOpen } from 'lucide-react';
 import { CategoryCard } from '@/components/CategoryCard';
 import type { ElementType } from 'react';
 
@@ -24,6 +24,7 @@ const categoryIcons: { [key: string]: ElementType } = {
   "Coding": Code,
   "CyberSpace": Globe,
   "CyberSecurity": Shield,
+  "Tutorials": BookOpen,
 };
 
 export default async function CategoriesPage() {
