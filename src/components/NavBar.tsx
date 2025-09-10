@@ -68,6 +68,7 @@ const NavLinkItems = memo(function NavLinkItems() {
 
 export function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,7 +98,7 @@ export function NavBar() {
           </div>
 
           <div className="md:hidden">
-            <Sheet>
+            <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
@@ -110,7 +111,7 @@ export function NavBar() {
                   <div className="mt-8">
                     <Search />
                   </div>
-                  <nav className="mt-8 flex flex-col gap-4">
+                  <nav className="mt-8 flex flex-col gap-4" onClick={() => setOpen(false)}>
                     <NavLinkItems />
                   </nav>
                 </div>
