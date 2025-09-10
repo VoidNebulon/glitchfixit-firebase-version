@@ -25,7 +25,9 @@ const NavLinkItems = memo(function NavLinkItems() {
   const [mounted, setMounted] = useState(false);
   const [hoveredLink, setHoveredLink] = useState('');
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return navLinks.map((link) => {
     const isActive = mounted && (pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href) && !link.href.includes('#')));
@@ -65,6 +67,8 @@ const NavLinkItems = memo(function NavLinkItems() {
     );
   });
 });
+NavLinkItems.displayName = 'NavLinkItems';
+
 
 export function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -112,7 +116,18 @@ export function NavBar() {
                     <Search />
                   </div>
                   <nav className="mt-8 flex flex-col gap-4" onClick={() => setOpen(false)}>
-                    <NavLinkItems />
+                    {navLinks.map((link) => (
+                      <Link
+                        key={`mobile-${link.href}`}
+                        href={link.href}
+                        className={cn(
+                          'rounded-md px-3 py-2 text-lg font-medium transition-colors',
+                           usePathname() === link.href ? 'text-primary bg-secondary' : 'text-foreground/80 hover:text-foreground'
+                        )}
+                      >
+                       {link.label}
+                      </Link>
+                    ))}
                   </nav>
                 </div>
               </SheetContent>
