@@ -18,6 +18,7 @@ const navLinks = [
   { href: '/featured', label: 'Featured' },
   { href: '/categories', label: 'Categories' },
   { href: '/about', label: 'About Us' },
+  { href: '/contact', label: 'Contact'},
 ];
 
 const NavLinkItems = memo(function NavLinkItems() {
