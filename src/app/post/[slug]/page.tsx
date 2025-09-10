@@ -97,7 +97,6 @@ export default async function PostPage({ params }: Props) {
         <div className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <Avatar className="h-6 w-6">
-              <AvatarImage src={`https://i.pravatar.cc/40?u=${post.author}`} />
               <AvatarFallback>{post.author.charAt(0)}</AvatarFallback>
             </Avatar>
             <span>{post.author}</span>
