@@ -62,7 +62,7 @@ export default async function Home() {
           <h2 className="mb-12 text-center font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
             Categories
           </h2>
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
             {categoryItems.map((item) => (
               <CategoryCard key={item.title} category={item} />
             ))}
