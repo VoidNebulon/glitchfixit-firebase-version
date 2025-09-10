@@ -43,6 +43,18 @@ export default async function Home() {
             <PostCard key={post.slug} post={post} />
           ))}
         </div>
+        <div className="mt-16 text-center">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30"
+              asChild
+            >
+              <Link href="/featured">
+                Read More
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+        </div>
       </section>
 
       <section id="categories" className="bg-muted py-16 sm:py-24">
