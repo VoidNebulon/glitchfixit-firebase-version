@@ -5,7 +5,7 @@ import { Star } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Featured Posts',
-  description: 'Browse all featured posts on the GlitchFix Blog.',
+  description: 'Browse all featured posts on GlitchFixIt.',
 };
 
 export default async function FeaturedPage() {

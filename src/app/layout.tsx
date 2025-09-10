@@ -6,22 +6,22 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'GlitchFix Blog - Your Guide to Modern Web Development',
-    template: '%s | GlitchFix Blog',
+    default: 'GlitchFixIt - Your Guide to Modern Web Development',
+    template: '%s | GlitchFixIt',
   },
   description:
     'A professional, responsive blogging website about fixing glitches and building modern web applications.',
   openGraph: {
-    title: 'GlitchFix Blog',
+    title: 'GlitchFixIt',
     description: 'Your guide to modern web development and debugging.',
     url: 'https://your-domain.com',
-    siteName: 'GlitchFix Blog',
+    siteName: 'GlitchFixIt',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GlitchFix Blog',
+    title: 'GlitchFixIt',
     description: 'Your guide to modern web development and debugging.',
   },
   robots: {

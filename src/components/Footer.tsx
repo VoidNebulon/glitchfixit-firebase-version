@@ -67,7 +67,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/70">
-          <p>&copy; {new Date().getFullYear()} GlitchFix Blog. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} GlitchFixIt. All rights reserved.</p>
         </div>
       </div>
     </footer>

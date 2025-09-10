@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn more about the GlitchFix Blog and our mission to help developers.',
+  description: 'Learn more about GlitchFixIt and our mission to help developers.',
 };
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
-            About GlitchFix Blog
+            About GlitchFixIt
           </h1>
           <p className="mt-6 text-lg text-foreground/80">
             We are a team of passionate developers dedicated to creating high-quality content to help you on your coding journey.

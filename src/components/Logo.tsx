@@ -26,7 +26,7 @@ export function Logo({ className }: LogoProps) {
         <rect x="2" y="2" width="20" height="20" rx="10" />
       </svg>
       <span className="text-xl font-extrabold tracking-tight font-headline">
-        GlitchFix <span className="hidden sm:inline">Blog</span>
+        GlitchFixIt
       </span>
     </Link>
   );

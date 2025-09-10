@@ -6,7 +6,7 @@ import type { ElementType } from 'react';
 
 export const metadata: Metadata = {
   title: 'All Categories',
-  description: 'Browse all categories on the GlitchFix Blog.',
+  description: 'Browse all categories on GlitchFixIt.',
 };
 
 const categoryIcons: { [key: string]: ElementType } = {
