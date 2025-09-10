@@ -52,7 +52,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased overflow-x-hidden">
         <div className="flex min-h-screen flex-col">
           <NavBar />
           <main className="flex-grow">{children}</main>
