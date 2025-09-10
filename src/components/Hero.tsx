@@ -69,7 +69,7 @@ export function Hero() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button
             size="lg"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30"
             onClick={() => scrollTo('featured-posts')}
           >
             <ArrowDown className="mr-2 h-5 w-5" />
@@ -78,7 +78,7 @@ export function Hero() {
           <Button
             size="lg"
             variant="outline"
-            className="w-full sm:w-auto border-primary/20 bg-background/50 hover:bg-background/80 focus:border-primary"
+            className="w-full sm:w-auto border-primary/20 bg-background/50 transition-all duration-300 hover:bg-background/80 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 focus:border-primary"
             onClick={() => scrollTo('categories')}
           >
             <LayoutGrid className="mr-2 h-5 w-5" />
