@@ -3,7 +3,7 @@ title: "Understanding the Document Object Model (DOM)"
 slug: "understanding-the-dom"
 date: "2024-06-05T12:00:00Z"
 author: "Johnny Storm"
-categories: ["JavaScript"]
+categories: ["Web Dev", "Coding"]
 tags: ["dom", "web-apis", "browser"]
 featured: false
 coverImage: "https://picsum.photos/seed/111/1200/630"

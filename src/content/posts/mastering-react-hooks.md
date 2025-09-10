@@ -3,7 +3,7 @@ title: "Mastering React Hooks"
 slug: "mastering-react-hooks"
 date: "2024-07-20T10:00:00Z"
 author: "Jane Doe"
-categories: ["React", "JavaScript", "State Management"]
+categories: ["Web Dev", "Coding", "Software", "Editor's Pick"]
 tags: ["hooks", "state", "effects"]
 featured: true
 coverImage: "https://picsum.photos/seed/101/1200/630"

@@ -3,7 +3,7 @@ title: "Getting Started with Next.js"
 slug: "getting-started-with-nextjs"
 date: "2024-07-18T14:30:00Z"
 author: "John Smith"
-categories: ["Next.js", "React", "JavaScript"]
+categories: ["Web Dev", "Coding", "Software", "Technology", "Latest News"]
 tags: ["framework", "ssr", "routing"]
 featured: true
 coverImage: "https://picsum.photos/seed/102/1200/630"

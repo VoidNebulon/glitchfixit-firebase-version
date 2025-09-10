@@ -1,6 +1,6 @@
 import { type Metadata } from 'next';
 import { getAllCategories } from '@/lib/posts';
-import { Tag, Atom, Box, Bug, Braces, Layers, Paintbrush } from 'lucide-react';
+import { Tag, Newspaper, Star, Lightbulb, Code, Cpu, Smartphone, Gamepad, AppWindow, Shield, Globe, Pencil } from 'lucide-react';
 import { CategoryCard } from '@/components/CategoryCard';
 import type { ElementType } from 'react';
 
@@ -10,12 +10,20 @@ export const metadata: Metadata = {
 };
 
 const categoryIcons: { [key: string]: ElementType } = {
-  'Next.js': Box,
-  'JavaScript': Braces,
-  'React': Atom,
-  'State Management': Layers,
-  'CSS': Paintbrush,
-  'Debugging': Bug,
+  "Technology": Cpu,
+  "IT": Code,
+  "Gadegets": Smartphone, // Note: "Gadegets" is likely a typo for "Gadgets"
+  "Software": AppWindow,
+  "Apps": AppWindow,
+  "Games": Gamepad,
+  "Latest News": Newspaper,
+  "Tech Reviews": Pencil,
+  "Must Read": Lightbulb,
+  "Editor's Pick": Star,
+  "Web Dev": Code,
+  "Coding": Code,
+  "CyberSpace": Globe,
+  "CyberSecurity": Shield,
 };
 
 export default async function CategoriesPage() {
@@ -24,7 +32,7 @@ export default async function CategoriesPage() {
     title: category,
     description: `View all posts`,
     link: `/search?category=${encodeURIComponent(category)}`,
-    icon: categoryIcons[category],
+    icon: categoryIcons[category] || Tag,
   }));
 
   return (

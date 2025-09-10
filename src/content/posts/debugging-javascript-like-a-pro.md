@@ -3,7 +3,7 @@ title: "Debugging JavaScript Like a Pro"
 slug: "debugging-javascript-like-a-pro"
 date: "2024-07-12T11:20:00Z"
 author: "Bob Brown"
-categories: ["JavaScript", "Debugging"]
+categories: ["Web Dev", "Coding", "Must Read"]
 tags: ["devtools", "errors", "tips"]
 featured: true
 coverImage: "https://picsum.photos/seed/104/1200/630"

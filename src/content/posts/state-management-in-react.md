@@ -3,7 +3,7 @@ title: "The State of State Management in React"
 slug: "state-management-in-react"
 date: "2024-07-10T16:45:00Z"
 author: "Charlie Davis"
-categories: ["React", "State Management"]
+categories: ["Web Dev", "Software", "Technology"]
 tags: ["redux", "zustand", "context"]
 featured: false
 coverImage: "https://picsum.photos/seed/105/1200/630"

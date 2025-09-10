@@ -3,7 +3,7 @@ title: "Optimizing Next.js Application Performance"
 slug: "optimizing-nextjs-performance"
 date: "2024-06-25T13:00:00Z"
 author: "Peter Parker"
-categories: ["Next.js", "Performance"]
+categories: ["Web Dev", "Software", "Technology", "Editor's Pick"]
 tags: ["optimization", "web-vitals", "images"]
 featured: true
 coverImage: "https://picsum.photos/seed/107/1200/630"

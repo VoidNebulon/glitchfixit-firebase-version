@@ -3,7 +3,7 @@ title: "An Introduction to TypeScript"
 slug: "introduction-to-typescript"
 date: "2024-06-20T11:00:00Z"
 author: "Susan Storm"
-categories: ["JavaScript", "TypeScript"]
+categories: ["Web Dev", "Coding", "Software"]
 tags: ["types", "static-typing", "productivity"]
 featured: false
 coverImage: "https://picsum.photos/seed/108/1200/630"

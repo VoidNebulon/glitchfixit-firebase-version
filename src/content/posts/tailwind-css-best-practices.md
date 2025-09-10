@@ -3,7 +3,7 @@ title: "Tailwind CSS Best Practices"
 slug: "tailwind-css-best-practices"
 date: "2024-07-08T08:30:00Z"
 author: "Diana Prince"
-categories: ["CSS"]
+categories: ["Web Dev", "Coding", "Must Read"]
 tags: ["tailwind", "utility-first", "design-systems"]
 featured: true
 coverImage: "https://picsum.photos/seed/106/1200/630"

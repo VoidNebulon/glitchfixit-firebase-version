@@ -3,7 +3,7 @@ title: "Web Accessibility Basics (a11y)"
 slug: "web-accessibility-basics"
 date: "2024-06-01T09:00:00Z"
 author: "Charles Xavier"
-categories: ["Best Practices", "HTML"]
+categories: ["Web Dev", "CyberSecurity", "Must Read"]
 tags: ["accessibility", "a11y", "semantic-html"]
 featured: false
 coverImage: "https://picsum.photos/seed/112/1200/630"

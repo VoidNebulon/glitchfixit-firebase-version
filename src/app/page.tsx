@@ -1,26 +1,30 @@
 import { Hero } from '@/components/Hero';
 import { SocialLinks } from '@/components/SocialLinks';
 import { PostCard } from '@/components/PostCard';
-import { getAllPosts, getAllCategories } from '@/lib/posts';
+import { getAllPosts } from '@/lib/posts';
 import { CategoryCard } from '@/components/CategoryCard';
 import type { ElementType } from 'react';
-import { Atom, Box, Bug, Braces, Layers, Paintbrush, ArrowRight } from 'lucide-react';
+import { Newspaper, Lightbulb, Star, Cpu, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 const categoryIcons: { [key: string]: ElementType } = {
-  'Next.js': Box,
-  'JavaScript': Braces,
-  'React': Atom,
-  'State Management': Layers,
-  'CSS': Paintbrush,
-  'Debugging': Bug,
+  "Latest News": Newspaper,
+  "Must Read": Lightbulb,
+  "Editor's Pick": Star,
+  "Technology": Cpu,
 };
 
 export default async function Home() {
   const posts = await getAllPosts();
   const featuredPosts = posts.filter((post) => post.featured).slice(0, 6);
-  const categories = (await getAllCategories()).slice(0, 4);
+  
+  const categories = [
+    "Latest News",
+    "Must Read",
+    "Editor's Pick",
+    "Technology"
+  ];
 
   const categoryItems = categories.map(category => ({
     title: category,

@@ -3,7 +3,7 @@ title: "Modern CSS Features You Should Be Using"
 slug: "modern-css-features"
 date: "2024-06-10T18:00:00Z"
 author: "Ben Grimm"
-categories: ["CSS"]
+categories: ["Web Dev", "Coding"]
 tags: ["features", "variables", "selectors"]
 featured: false
 coverImage: "https://picsum.photos/seed/110/1200/630"

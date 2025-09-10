@@ -3,7 +3,7 @@ title: "A Deep Dive into CSS Grid"
 slug: "deep-dive-into-css-grid"
 date: "2024-07-15T09:00:00Z"
 author: "Alice Johnson"
-categories: ["CSS"]
+categories: ["Web Dev", "Coding"]
 tags: ["layout", "grid", "design"]
 featured: false
 coverImage: "https://picsum.photos/seed/103/1200/630"
