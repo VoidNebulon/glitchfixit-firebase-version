@@ -5,7 +5,7 @@ import { format } from 'date-fns';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import type { Post } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Calendar, UserCircle, Tag, Clock, Star } from 'lucide-react';
 import { MdxContent } from '@/components/MdxContent';
 import { ShareButtons } from '@/components/ShareButtons';
@@ -96,7 +96,7 @@ export default async function PostPage({ params }: Props) {
         </h1>
         <div className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <Avatar className="h-6 w-6">
+            <Avatar className="h-6 w-6 border-2 border-primary/20">
               <AvatarFallback>{post.author.charAt(0)}</AvatarFallback>
             </Avatar>
             <span>{post.author}</span>
