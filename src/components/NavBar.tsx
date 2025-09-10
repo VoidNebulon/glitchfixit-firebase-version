@@ -15,7 +15,7 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/#featured-posts', label: 'Featured' },
+  { href: '/featured', label: 'Featured' },
   { href: '/categories', label: 'Categories' },
   { href: '/about', label: 'About Us' },
 ];
