@@ -10,6 +10,11 @@ const navLinks = [
   { href: '/categories', label: 'Categories' },
 ];
 
+const legalLinks = [
+  { href: '/legal/privacy-policy', label: 'Privacy Policy' },
+  { href: '/legal/terms-of-service', label: 'Terms of Service' },
+]
+
 const socials = [
   { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
   { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
@@ -20,8 +25,8 @@ export function Footer() {
   return (
     <footer style={{ backgroundColor: '#030f04' }} className="text-white/80">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:text-left">
-          <div className="flex flex-col items-center md:items-start">
+        <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-4 md:text-left">
+          <div className="flex flex-col items-center md:items-start md:col-span-1">
             <div className="mb-4 p-3 rounded-md">
               <Logo className="text-white" />
             </div>
@@ -33,6 +38,18 @@ export function Footer() {
             <h3 className="mb-4 font-headline text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
               {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm transition-colors hover:text-white">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-4 font-headline text-lg font-semibold text-white">Legal</h3>
+            <ul className="space-y-2">
+              {legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm transition-colors hover:text-white">
                     {link.label}
