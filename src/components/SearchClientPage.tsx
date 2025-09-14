@@ -69,7 +69,7 @@ export function SearchClientPage({ allPosts, categories }: { allPosts: Post[], c
           <div className="flex items-center gap-2 mb-4">
              <SearchIcon className="h-10 w-10 text-primary" />
              <h1 className="font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
-              Search Posts
+              Search All Posts
             </h1>
           </div>
           <div className="grid grid-cols-1 gap-4 rounded-2xl bg-card p-6 shadow-sm sm:grid-cols-2 md:grid-cols-4">
