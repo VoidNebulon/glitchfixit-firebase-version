@@ -1,10 +1,10 @@
-import { Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin, X } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 const socials = [
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: X, href: 'https://x.com', label: 'X' },
   { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
   { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
 ];

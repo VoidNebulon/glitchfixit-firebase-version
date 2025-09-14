@@ -1,7 +1,7 @@
 import { Logo } from './Logo';
 import { Button } from './ui/button';
 import Link from 'next/link';
-import { Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin, X } from 'lucide-react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -16,7 +16,7 @@ const legalLinks = [
 ]
 
 const socials = [
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: X, href: 'https://x.com', label: 'X' },
   { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
   { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
 ];
