@@ -30,7 +30,7 @@ function XLogo(props: SVGProps<SVGSVGElement>) {
 }
 
 
-const socials = [
+export const socials = [
   { icon: XLogo, href: 'https://x.com', label: 'X' },
   { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
   { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
