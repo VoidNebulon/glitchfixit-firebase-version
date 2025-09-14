@@ -1,6 +1,6 @@
 import { Button } from './ui/button';
 import Link from 'next/link';
-import { socials } from './Footer';
+import { socials } from '@/lib/socials';
 
 export function SocialLinks() {
   return (
