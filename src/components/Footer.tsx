@@ -6,8 +6,8 @@ import { Instagram, Twitter, Linkedin } from 'lucide-react';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/search', label: 'All Posts' },
   { href: '/categories', label: 'Categories' },
-  { href: '/search', label: 'Search' },
 ];
 
 const socials = [
