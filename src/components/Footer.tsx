@@ -1,7 +1,8 @@
 import { Logo } from './Logo';
 import { Button } from './ui/button';
 import Link from 'next/link';
-import { Instagram, Linkedin, X } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
+import type { SVGProps } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -15,8 +16,22 @@ const legalLinks = [
   { href: '/legal/terms-of-service', label: 'Terms of Service' },
 ]
 
+function XLogo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 1200 1227"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.163 519.284ZM569.165 687.828L521.697 619.934L144.011 79.6904H306.615L611.412 515.685L658.88 583.579L1055.08 1150.31H892.476L569.165 687.828Z" />
+    </svg>
+  );
+}
+
+
 const socials = [
-  { icon: X, href: 'https://x.com', label: 'X' },
+  { icon: XLogo, href: 'https://x.com', label: 'X' },
   { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
   { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
 ];
