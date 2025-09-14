@@ -33,7 +33,7 @@ GlitchFixIt is a server-rendered blogging application designed for developers. I
 
 The project follows a standard Next.js App Router structure. Key directories are outlined below:
 
-```
+``` text
 .
 ├── src
 │   ├── app/                # Main application routes (App Router)
@@ -80,6 +80,7 @@ The project follows a standard Next.js App Router structure. Key directories are
 - The `src/lib/posts.ts` file contains the logic for reading the file system and parsing these Markdown files. It uses a custom frontmatter parser.
 
 **Example Post Frontmatter (`.md` file):**
+
 ```yaml
 ---
 title: "My Awesome Blog Post"
@@ -120,12 +121,14 @@ The rest of the file is standard Markdown content...
 
 To run the project locally, follow these steps:
 
-1.  **Install Dependencies**:
+1. **Install Dependencies**:
+
     ```bash
     npm install
     ```
 
-2.  **Run the Development Server**:
+2. **Run the Development Server**:
+
     ```bash
     npm run dev
     ```
