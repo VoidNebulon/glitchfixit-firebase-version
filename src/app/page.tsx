@@ -7,6 +7,7 @@ import type { ElementType } from 'react';
 import { Newspaper, Lightbulb, Star, Cpu, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import phrases from '@/lib/hero-phrases.json';
 
 const categoryIcons: { [key: string]: ElementType } = {
   "Latest News": Newspaper,
@@ -35,7 +36,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col">
-      <Hero />
+      <Hero phrases={phrases} />
       <SocialLinks />
       
       <section id="featured-posts" className="container mx-auto px-4 py-16 sm:py-24">

@@ -6,23 +6,17 @@ import { WavyBackground } from './ui/wavy-background';
 import Link from 'next/link';
 import { ArrowDown, LayoutGrid } from 'lucide-react';
 
-const phrases = [
-  'fix your code glitches.',
-  'build modern websites.',
-  'master Next.js.',
-  'level up your skills.',
-  'debug with confidence.',
-  'explore new technologies.',
-  'optimize your system.',
-  'understand complex topics.',
-];
+type HeroProps = {
+  phrases: string[];
+};
 
-export function Hero() {
+export function Hero({ phrases }: HeroProps) {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    if (!phrases || phrases.length === 0) return;
     // This effect should only run on the client
     const currentPhrase = phrases[phraseIndex];
     const typingSpeed = isDeleting ? 75 : 150;
@@ -44,7 +38,7 @@ export function Hero() {
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [text, isDeleting, phraseIndex]);
+  }, [text, isDeleting, phraseIndex, phrases]);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
