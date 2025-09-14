@@ -23,15 +23,10 @@ const navLinks = [
 
 const NavLinkItems = memo(function NavLinkItems() {
   const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
   const [hoveredLink, setHoveredLink] = useState('');
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return navLinks.map((link) => {
-    const isActive = mounted && (pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href) && !link.href.includes('#')));
+    const isActive = (pathname === link.href) || (link.href !== '/' && pathname.startsWith(link.href));
     
     return (
       <Link
@@ -74,6 +69,7 @@ NavLinkItems.displayName = 'NavLinkItems';
 export function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -123,7 +119,7 @@ export function NavBar() {
                         href={link.href}
                         className={cn(
                           'rounded-md px-3 py-2 text-lg font-medium transition-colors',
-                           usePathname() === link.href ? 'text-primary bg-secondary' : 'text-foreground/80 hover:text-foreground'
+                           pathname === link.href ? 'text-primary bg-secondary' : 'text-foreground/80 hover:text-foreground'
                         )}
                       >
                        {link.label}
