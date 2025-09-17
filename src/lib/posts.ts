@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import type { Post } from './types';
 
-const postsDirectory = path.join(process.cwd(), 'src/content/posts');
+const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 function parseFrontmatter(fileContent: string) {
   const frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
@@ -73,8 +73,15 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 export async function getAllCategories(): Promise<string[]> {
   const allPosts = await getAllPosts();
   const categories = new Set<string>();
-  allPosts.forEach(post => {
-    post.categories.forEach(category => categories.add(category));
+  // console.log(allPosts)
+  // allPosts.forEach(post => {
+  //   post.categories.forEach(category => categories.add(category));
+  // });
+  allPosts.forEach((post) => {
+    const cats = Array.isArray(post.categories)
+      ? post.categories
+      : [post.categories].filter(Boolean);
+    cats.forEach((category) => categories.add(category));
   });
   return Array.from(categories);
 }

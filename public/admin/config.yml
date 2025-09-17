@@ -1,0 +1,49 @@
+local_backend: false
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"      # adjust if your posts are elsewhere
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Reading Time", name: "reading-time", widget: "string" }
+
+      # ✅ Multi-select dropdown for categories
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options:
+          - Web Dev
+          - Coding
+          - Software
+          - Technology
+          - Editors Pick
+          - Latest News
+          - Tutorials
+          - Must Read
+        default: ["Must Read"]
+
+      # ✅ Free-form list for tags
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        field: { label: "Tag", name: "tag", widget: "string" }
+
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Cover Image", name: "coverImage", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

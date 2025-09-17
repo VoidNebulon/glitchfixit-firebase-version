@@ -1,0 +1,34 @@
+INSTRUCTIONS:
+-------------------------------
+-Customize animated text on hero:
+
+I have moved the list of phrases to a central location. To edit them:
+
+Find the File: Open the file named hero-phrases.json located in the src/lib/ directory.
+Edit the Text: You will see a simple list of phrases in quotation marks. You can change, add, or remove any of these lines to customize the text that appears on your homepage.
+For example:
+
+[
+  "your first phrase.",
+  "your second phrase.",
+  "and so on."
+]
+-------------------------------
+-Change Social Links:
+To update your social media links, you just need to do the following:
+
+Open the File: Navigate to the new file at src/lib/socials.ts.
+
+Edit the Array: In this file, you can modify the socials array. For example, to change your X profile URL, you would simply edit this line:
+
+{ icon: XLogo, href: 'https://x.com/your-profile', label: 'X' },
+
+It's that easy. Any changes you make here will be reflected across your entire website.
+
+-------------------------------
+I've set up the system so that editing your legal pages is very straightforward:
+
+Navigate to the Files: In your project's file explorer, go to the src/content/legal/ directory.
+Edit the Markdown:
+To edit your Privacy Policy, open and modify the privacy-policy.md file.
+To edit your Terms of Service, open and modify the terms-of-service.md file.

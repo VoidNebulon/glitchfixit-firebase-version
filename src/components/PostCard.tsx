@@ -34,17 +34,22 @@ export function PostCard({ post }: PostCardProps) {
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Calendar className="h-4 w-4" />
             <time dateTime={post.date}>
-              {format(new Date(post.date), 'MMMM d, yyyy')}
+              {format(new Date(post.date), "MMMM d, yyyy")}
             </time>
           </div>
         </CardContent>
         <CardFooter className="flex-wrap gap-2 p-6 pt-0">
-          {post.categories.slice(0, 3).map((category) => (
-            <Badge key={category} variant="secondary" className="font-normal">
-              <Tag className="mr-1 h-3 w-3"/>
-              {category}
-            </Badge>
-          ))}
+          {(Array.isArray(post.categories)
+            ? post.categories
+            : []
+          )
+            .slice(0, 3)
+            .map((category) => (
+              <Badge key={category} variant="secondary" className="font-normal">
+                <Tag className="mr-1 h-3 w-3" />
+                {category}
+              </Badge>
+            ))}
         </CardFooter>
       </Card>
     </Link>

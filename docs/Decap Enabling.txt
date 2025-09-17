@@ -1,0 +1,49 @@
+------------------------------------------
+!!!"decap-cms-app": "^3.8.3",!!!
+------------------------------------------
+>for token popup fix:
+
+--run: npm install react-netlify-identity
+
+--add file "/components/NetlifyAuthProvider.tsx" &&& add this inside it:
+
+!!!
+"use client";
+
+import { useEffect } from "react";
+
+export default function NetlifyAuthProvider() {
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window as any).netlifyIdentity) {
+      const netlifyIdentity = (window as any).netlifyIdentity;
+
+      netlifyIdentity.on("init", (user: any) => {
+        if (!user) {
+          netlifyIdentity.on("login", () => {
+            document.location.href = "/admin";
+          });
+        }
+      });
+    }
+  }, []);
+
+  return null; // This component doesn't render anything
+}
+!!!
+
+--add this inside "layout.tsx":
+
+!!!
+import NetlifyAuthProvider from "@/components/NetlifyAuthProvider";
+
+...
+
+<body>
+...
+        <NetlifyAuthProvider />
+        {children}
+</body>
+!!!
+
+
+
