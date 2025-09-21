@@ -1,21 +1,30 @@
----
-title: "Terms of Service"
----
+# Terms and Conditions
 
-## 1. Agreement to Terms
+_Last updated: [22/September/2024]_
 
-By using our website, you agree to be bound by these Terms of Service. If you do not agree to these Terms of Service, you may not use our website.
+Welcome to GLITCHFIXIT! By accessing or using our services, you agree to comply with and be bound by the following terms and conditions.
 
-## 2. Changes to Terms or Services
+## 1. Acceptance of Terms
 
-We may update the Terms at any time, in our sole discretion. If we do so, we’ll let you know either by posting the updated Terms on the Site or through other communications. It’s important that you review the Terms whenever we update them or you use the Services.
+By using our services, you agree to these Terms and Conditions. If you do not agree, please discontinue use.
 
-## 3. Content Ownership
+## 2. Use of Services
 
-All content on this website, including articles, images, and logos, is the property of GlitchFixIt and is protected by copyright laws. You may not reproduce, distribute, or create derivative works from our content without our express written permission.
+- You must be at least to use our services.
+- You agree not to misuse, abuse, or attempt to disrupt our services.
 
-## 4. Disclaimers
+## 3. Intellectual Property
 
-The information provided on this blog is for informational purposes only. We make no representations as to the accuracy, completeness, suitability, or validity of any information on this site and will not be liable for any errors, omissions, or delays in this information or any losses, injuries, or damages arising from its display or use.
+All content, trademarks, and materials provided are the property of [Glitchfixit] unless otherwise stated.
 
-*This is a placeholder. Please replace with your own Terms of Service.*
+## 4. Limitation of Liability
+
+We are not liable for any indirect, incidental, or consequential damages arising from your use of our services.
+
+## 5. Termination
+
+We may suspend or terminate your access if you violate these Terms.
+
+## 6. Governing Law
+
+These Terms shall be governed by and construed in accordance with the laws of [Your Country/State].
