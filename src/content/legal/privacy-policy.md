@@ -1,8 +1,10 @@
-# Privacy Policy
+---
+title: "Privacy Policy"
+---
 
-_Last updated: [20/September/2024]_
+Last updated: **20/September/2024**
 
-Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information.
+**Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information.**
 
 ## 1. Information We Collect
 

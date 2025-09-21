@@ -1,8 +1,10 @@
-# Terms and Conditions
+---
+title: "Terms of Service"
+---
 
-_Last updated: [22/September/2024]_
+Last updated: **22/September/2024**
 
-Welcome to GLITCHFIXIT! By accessing or using our services, you agree to comply with and be bound by the following terms and conditions.
+**Welcome to GLITCHFIXIT!** By accessing or using our services, you agree to comply with and be bound by the following terms and conditions
 
 ## 1. Acceptance of Terms
 
